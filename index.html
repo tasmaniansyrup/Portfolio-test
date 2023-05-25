@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Andrews Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500;700;800&family=Nunito:wght@800&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="header">
@@ -13,14 +16,19 @@
         <nav>
             <ul>
                 <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">Mission</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>            
             </ul>
         </nav>
+
+        <div class="underline">
+            <p></p>
+        </div>
+
         <div class="header-text">
+            <h1>Hello! I'm <span>Ryan Andrews</span></h1>
             <p>Software Engineer</p>
-            <h1>I'm <span>Ryan Andrews</span> <br> based in Fort Collins, Colorado</h1>
         </div>
     </div>
 </div>
@@ -38,8 +46,8 @@
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('coursework')">Coursework</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -48,16 +56,15 @@
                         <li>HTML and CSS</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="experience">
+                <div class="tab-contents" id="coursework">
                     <ul>
-                        <li>exp1</li>
-                        <li>exp2</li>
-                        <li>exp3</li>
+                        <li>Data Structures</li>
+                        <li>Discrete Structures</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li>edu1</li>
+                        <li>I'm currently pursuing a BS in Computer Science at Colorado State University.</li>
                     </ul>
                 </div>
             </div>
@@ -87,7 +94,7 @@
                     <input type="text" name="Name" placeholder="Your Name" required> 
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Send</button>
+                    <button type="submit" class="btn btn2">SEND</button>
                 </form>
             </div>
         </div>
@@ -123,7 +130,8 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
-  
+
+  <script src="script.js"></script>  
 
 </body>
 </html>

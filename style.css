@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Garamond', 'serif';
+    font-family: 'Nunito', 'sans-serif';
     box-sizing: border-box;
 }
 
@@ -10,22 +10,27 @@ html{
 }
 
 body{
-    background: rgb(15, 50, 61);
+    background: linear-gradient(to right, rgb(12, 12, 12), rgb(9, 31, 39));
     color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 #header{
-    width: 100%;
-    height: 100vh;
     background-image: url(images/space.jpg);
+    background-clip: content-box;
     background-size: cover;
-    background-position: bottom;
+    background-position: left;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 40px;
     background-repeat: no-repeat;
 }
 
 .container{
     padding: 5px 5%;
 }
+
 
 nav{
     display: flex;
@@ -39,55 +44,82 @@ nav{
     height: 15%;
 }
 
+.underline{
+    border-bottom: 1px solid #ffffff;
+    margin: auto;
+    animation: expandBarOut 2s;
+}
+
+@keyframes expandBarOut {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10% 20px;
+    margin: 10% 10px;
 }
 
 nav ul li a{
     color: #ffffff;
     text-decoration: solid;
+    text-shadow: 2px 2px black;
     font-size: 20px;
     position: relative;
+    z-index: 0;
 }
 
 
 nav ul li a::after{
     content: '';
-    width: 0;
-    height: 3px;
-    background-color: #ff3c00;
+    width: 10px;
+    height: 0px;
+    background-color: #2b2b2b;
+    border-radius: 5px;
     position: absolute;
-    left: 0;
-    bottom: -6px;
+    left: -8px;
+    bottom: -3px;
     transition: 0.5s;
+    z-index: -2;
 }
 
 nav ul li a:hover::after{
-    width: 100%;
+    width: 125%;
+    height: 120%;
 }
 
 .header-text{
     color: rgb(255, 255, 255);
-    margin-left: 50px;
     font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
 }
 
 .header-text h1{
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: -20px;
-    font-size: 28px;
+    font-size: 32px;
+    font-family: 'MuseoModerno' , 'serif';
+}
+
+.header-text p{
+    font-family: 'MuseoModerno' , 'serif';
 }
 
 .header-text h1 span{ 
-    color: #d33232;
+    color: #14d198;
 }
 /* -------about--------*/
 #about{
     padding: 60px 0;
-    color: #ababab;
+    color: #615f5f;
 }
 
 .row{
@@ -155,8 +187,9 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li{
-    list-style: none;
+    list-style-type: circle;
     margin: 5px;
+    margin-left: 10px;
 }
 
 .tab-contents{
@@ -200,27 +233,33 @@ nav ul li a:hover::after{
 }
 
 .btn{
-    margin-left: 230px;
     width: 250px;
     height: 25px;
-    border-radius: 10px;
+    border: none;
+    box-shadow: 20px, 20px, rgb(0, 0, 0, .4);
 }
 
 .btn.btn2{
-    font-family: baskerville, serif;
-    display: inline-block;
+    margin-left: 360px;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 7px;
     font-size: medium;
-    color: rgb(255, 255, 255);
-
-    background: rgb(255, 255, 255);
+    cursor: pointer;
+    color: rgb(75, 143, 98);
+    background: linear-gradient(to left, rgb(12, 24, 34), rgb(50, 116, 91));
+    letter-spacing: .5px;
+    text-shadow: 2px, 2px, #000000;
+    box-shadow: 2px 3px rgb(13, 40, 41);
 }
+
 
 .contact-right form{
     width: 100%;
 }
 
 form input, form textarea{
-    font-family: baskerville, serif;
+    font-family: 'Varela Round', serif;
     width: 100%;
     border: 0;
     outline: none;
