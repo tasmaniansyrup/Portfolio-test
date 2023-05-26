@@ -5,10 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Andrews Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500;700;800&family=Nunito:wght@800&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=MuseoModerno:wght@400;500;700;800&family=Nunito:wght@800&family=Righteous&family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- end fonts -->
+
+
+
+    <!-- icons -->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sync.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/software-download.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/file-document.css' rel='stylesheet'>
+    <!-- end icons -->
+
+
 </head>
 <body>
 <div id="header">
@@ -38,7 +51,28 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/catputer.jpg">
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="flip-card-inner">
+                        <audio src="Paper Folding short.mp3" id="paper_audio"></audio>
+                        <div class="flip-card-front">
+                            <i class="gg-sync"></i>
+                            <img src="images/catputer.jpg">
+                            <h1>My Goal</h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="gg-sync"></i>
+                            <img src="images/thebeast.jpg">
+                            <h1>Download My Resume</h1>
+                            <div class="resume-box">
+                                <a href="Ryan_Andrews_Resume.docx" download>
+                                    <i class="gg-software-download"></i>
+                                </a>
+                                <i class="gg-file-document"></i>
+                                <p>Resume.txt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">This is me</h1>
@@ -107,15 +141,27 @@
     var tabcontents = document.getElementsByClassName("tab-contents");
 
     function opentab(tabname) {
-        for(tablink of tablinks) {
-            tablink.classList.remove("active-link");
+        if (!document.getElementById(tabname).classList.contains("active-tab")) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
+        else {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
         }
 
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+
     }
 </script>
 
