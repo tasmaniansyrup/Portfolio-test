@@ -16,11 +16,34 @@ body{
     padding: 0;
 }
 
+/* Start scrollbar */
+
+::-webkit-scrollbar {
+    display: none;
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(32, 30, 30);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(16, 7, 31);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: #080f24;
+  }
+
+  /*end scrollbar */
+
+
 #header{
     background-image: url(images/space.jpg);
     background-clip: content-box;
     background-size: cover;
-    background-position: left;
     height: 100vh;
     padding: 20px;
     border-radius: 40px;
@@ -253,6 +276,11 @@ nav ul li a:hover::after{
     box-shadow: 2px 3px rgb(13, 40, 41);
 }
 
+.btn.btn2:active {
+    transform: translateX(10px);
+    transform: translateY(2px);
+    box-shadow: none;
+}
 
 .contact-right form{
     width: 100%;
