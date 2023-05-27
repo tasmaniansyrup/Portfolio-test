@@ -9,7 +9,7 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=MuseoModerno:wght@400;500;700;800&family=Nunito:wght@800&family=Righteous&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=MuseoModerno:wght@400;500;700;800&family=Nunito:wght@800&family=Raleway:wght@300&family=Righteous&family=Titan+One&family=Varela+Round&display=swap" rel="stylesheet">
     <!-- end fonts -->
 
 
@@ -40,7 +40,8 @@
         </div>
 
         <div class="header-text">
-            <h1>Hello! I'm <span>Ryan Andrews</span></h1>
+            <h1>Hello! </h1>
+            <h2> I'm <span>Ryan Andrews</span></h2>
             <p>Software Engineer</p>
         </div>
     </div>
@@ -56,20 +57,20 @@
                         <audio src="Paper Folding short.mp3" id="paper_audio"></audio>
                         <div class="flip-card-front">
                             <i class="gg-sync"></i>
-                            <img src="images/catputer.jpg">
+                            <img src="images/catputer.jpg" id="catpic">
                             <h1>My Goal</h1>
                         </div>
                         <div class="flip-card-back">
                             <i class="gg-sync"></i>
-                            <img src="images/thebeast.jpg">
-                            <h1>Download My Resume</h1>
-                            <div class="resume-box">
-                                <a href="Ryan_Andrews_Resume.docx" download>
+                            <img src="images/thebeast.jpg" id="dogface">
+                            <h1>Check out my resume!</h1>/
+                            <a href="Ryan_Andrews_Resume.docx" download>
+                                <button type="button" class="resume_box">
                                     <i class="gg-software-download"></i>
-                                </a>
-                                <i class="gg-file-document"></i>
-                                <p>Resume.txt</p>
-                            </div>
+                                    <i class="gg-file-document"></i>
+                                    <p>MyResume.docx</p>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -79,11 +80,11 @@
                 <p>I'm a second year college student with primary interests in software engineering and cybersecurity.</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                     <p class="tab-links" onclick="opentab('coursework')">Coursework</p>
                 </div>
-                <div class="tab-contents" id="skills">
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li>C++</li>
                         <li>Python</li>
