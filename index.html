@@ -8,8 +8,8 @@
     
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=MuseoModerno:wght@400;500;700;800&family=Nunito:wght@800&family=Raleway:wght@300&family=Righteous&family=Titan+One&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@300;500;600&family=MuseoModerno:wght@400;500;700;800&family=Nunito:wght@800&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@300&family=Righteous&family=Varela+Round&display=swap" rel="stylesheet">
     <!-- end fonts -->
 
 
@@ -35,9 +35,15 @@
             </ul>
         </nav>
 
+        <div class="secret-button">
+            <button type="button" id="secret-button">lAEKYDOO</button>
+        </div>
+
         <div class="underline">
             <p></p>
         </div>
+
+        <img src="images/dripping.png" id="dripping" class="dripping">
 
         <div class="header-text">
             <h1>Hello! </h1>
@@ -55,17 +61,25 @@
                 <div class="flip-card">
                     <div class="flip-card-inner" id="flip-card-inner">
                         <audio src="Paper Folding short.mp3" id="paper_audio"></audio>
-                        <div class="flip-card-front">
+                        <div class="flip-card-front" id="flip-card-front">
                             <i class="gg-sync"></i>
-                            <img src="images/catputer.jpg" id="catpic">
-                            <h1>My Goal</h1>
+                            <img src="images/universe.jpg">
+                            <h1>My Mission</h1>
+                            <hr>
+                            <p>To delve deep into all there is to know about computers 
+                                and how they function. Software development, 
+                                AI and machine learning, cybersecurity, I 
+                                want to understand how people have learned to push
+                                computers and then I want to push even further.</p>
                         </div>
                         <div class="flip-card-back">
-                            <i class="gg-sync"></i>
-                            <img src="images/thebeast.jpg" id="dogface">
-                            <h1>Check out my resume!</h1>/
+                            <div class="click-back" id="flip-card-back">
+                                <i class="gg-sync"></i>
+                                <img src="images/galaxy-rotated.jpg">
+                                <h1>Check out my resume!</h1>
+                            </div>
                             <a href="Ryan_Andrews_Resume.docx" download>
-                                <button type="button" class="resume_box">
+                                <button type="button" class="resume_box" id="resume-box">
                                     <i class="gg-software-download"></i>
                                     <i class="gg-file-document"></i>
                                     <p>MyResume.docx</p>

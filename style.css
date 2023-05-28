@@ -113,6 +113,7 @@ nav{
   }
 
 
+
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -154,31 +155,93 @@ nav ul li a:hover::after{
     margin-top: 100px;
 }
 
+@keyframes sizeUp {
+    from {
+        scale: 0;
+        opacity: 0;
+    }
+    40% {
+        transform: scale(400%) rotate(760deg);
+    }
+    60% {
+        transform: scale(400%) rotate(710deg);
+    }
+    80% {
+        transform: scale(400%) rotate(725deg);
+    }
+    100% {
+        transform: scale(400%) rotate(720deg);
+        opacity: 1;
+    }
+}
+
+@keyframes resetCursor {
+    from {}
+    to {
+        cursor: default;
+    }
+}
+
+.spun {
+    animation-name: sizeUp;
+    animation-duration: 5s;
+}
+
+.resetCursor {
+    animation-fill-mode: forwards;
+    animation-name: resetCursor;
+    animation-duration: .1s;
+}
+
+.dripping {
+    opacity: 0;
+    margin-top: 5vh;
+    margin-left: 50vh;
+    scale: 25%;
+    position: fixed;
+    z-index: 10;
+}
+
+.secret-button button {
+    opacity: 0;
+    height: 60px;
+    position: absolute;
+    right: 2%;
+    top: 5%;
+}
+
+.secret-button button:hover {
+    cursor: pointer;
+}
+
+
 .header-text h1{
     padding: 0;
     display: inline;
     font-size: 32px;
     font-family: 'MuseoModerno' , 'serif';
-    animation: fadeIn 1s;
+    animation: fadeIn 2.5s;
 }
 
 .header-text h2{
     padding: 0;
+    opacity: 0;
     display: inline;
     font-size: 32px;
     font-family: 'MuseoModerno' , 'serif';
-    animation-delay: 1s;
     animation: fadeIn 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 
 .header-text p{
     opacity: 0;
     font-family: 'MuseoModerno' , 'serif';
-    font-size: 20px;
+    font-size: 22px;
     animation: fadeIn 4s;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 
 
@@ -276,11 +339,10 @@ nav ul li a:hover::after{
 /* flip card */
 
 .flip-card{
-    width: 350px;
+    width: 40vh;
     height: 500px;
     perspective: 1000px;
     background-color: transparent;
-    align-items: center;
 }
 
 /* This container is needed to position the front and back side */
@@ -307,16 +369,23 @@ nav ul li a:hover::after{
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
-    width: 100%;
+    width: 40vh;
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
 
   .flip-card-front img, .flip-card-back img{
-    box-shadow: 3px 4px #2d2c30;
-    width: 375px;
+    display: flex;
+    margin-top: -30px;
+    box-shadow: 2px 3px #171718;
     height: 500px;
+    width: 40vh;
+  }
+
+  .flip-card-back img {
+    object-position: 70% 90%;
+    object-fit: cover;
   }
   
   /* Style the front side (fallback if image is missing) */
@@ -324,18 +393,49 @@ nav ul li a:hover::after{
     color: white;
   }
 
+  .flip-card-front p {
+    font-family: 'Montserrat', sans-serif;
+    color: #817e7e;
+    margin-top: 55px;
+    margin-left: 65px;
+    margin-right: -45px;
+    position: relative;
+  }
+
+  hr {
+    background: linear-gradient(left, rgba(8, 13, 87, 0), #0a1361, rgba(16, 11, 85, 0));
+    position: relative;
+    height: 2px;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 100px;
+    border: 0;
+  }
+
+  hr::after {
+    height: 30px;
+    display: block;
+    content: '';
+    background-image: radial-gradient(farthest-side at center top, #1c51a0 0%, rgba(125, 125, 128, 0) 100%);
+  }
+
   .flip-card-front h1 {
-    color: rgb(0, 0, 0);
-    margin-top: -500px;
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: .2px;
+    color: rgb(52, 109, 194);
+    margin-top: -470px;
     margin-left: 125px;
+    text-shadow: 1px 1px rgb(123, 125, 126);
+    font-weight: 400;
   }
 
   .gg-sync {
-    color: #0b1855;
-    position: absolute;
-    top: 40px;
+    position: relative;
+    color: #bd7312;
+    margin-right: 0px;
+    top: 13px;
     left: 390px;
-    z-index: 3;
   }
   
   /* Style the back side */
@@ -345,16 +445,18 @@ nav ul li a:hover::after{
   }
 
   .flip-card-back h1 {
-    margin-top: -460px;
-    margin-left: 125px;
-    font-size: 21px;
-    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin-top: -390px;
+    margin-left: 120px;
+    font-size: 24px;
+    color: #ffffff;
   }
   
   .flip-card-back button{ 
     height: 50px;
     width: 300px;
-    margin-top: 70px;
+    margin-top: 30px;
     margin-left: 75px;
     background-color: rgb(255, 255, 255);
     z-index: 10;

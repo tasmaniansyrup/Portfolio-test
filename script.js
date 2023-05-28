@@ -1,11 +1,19 @@
 const flipcard = document.getElementById("flip-card-inner");
 const paper = document.getElementById("paper_audio");
-const dog = document.getElementById("dogface");
-const cat = document.getElementById("catpic");
+const cardBack = document.getElementById("flip-card-back");
+const cardFront = document.getElementById("flip-card-front");
+const dripping = document.getElementById("dripping");
+const secretButton = document.getElementById("secret-button");
 
 
-cat.addEventListener("click", flipCard);
-dog.addEventListener("click", flipCard);
+
+cardFront.addEventListener("click", flipCard);
+cardBack.addEventListener("click", flipCard);
+
+secretButton.addEventListener("click", function() {
+    dripping.classList.add("spun");
+    secretButton.classList.add("resetCursor");
+});
 
 function flipCard() {
     flipcard.classList.toggle("flipCard");
